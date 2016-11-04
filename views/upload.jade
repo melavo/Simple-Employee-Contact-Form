@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1= title
+    div.newemployee
+        form(method="POST", action="/upload", enctype="multipart/form-data")
+            div
+                div
+                    span.label File :
+                    input(type="file", name="fileUploaded", id="fileUploaded")
+               
+                div#editEmployeeSubmit
+                    input(type="submit", value="Upload")
+        a(href="/")!= "Back to Employee List"

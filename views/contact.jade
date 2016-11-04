@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1= title
+    div.newemployee
+        form( method="post")
+            div
+                div
+                    span.label Fullname :
+                    input(type="text", name="name", id="yourName")
+                div
+                    span.label Email :
+                    input(type="text", name="email", id="yourEmail")
+                div
+                    span.label Subject :
+                    input(type="text", name="subject", id="yourSubject")
+                div
+                    span.label Message :
+                    textarea( name="message", id="yourMessage")
+                div#editEmployeeSubmit
+                    input(type="submit", value="Send")
+        a(href="/")!= "Back to Employee List"
